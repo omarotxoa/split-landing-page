@@ -3,6 +3,8 @@
     --right-bg-color: rgba(43,43,43,0.7);
     --left-btn-hover-color: rgba(34, 81, 184,1);
     --right-btn-hover-color: rgba(28,122,28,1);
+    --hover-width: 75%;
+    --other-width: 25%;
 }
 * {
     box-sizing: border-box;
@@ -94,4 +96,25 @@ h1 {
     height: 100%;
     width: 100%;
     opacity: 0.4;
+}
+
+.split.right, .split.left,
+.split.right::before, .split.left::before {
+    transition: all ease-out 500ms;
+}
+
+.hover-left .left {
+    width: var(--hover-width);
+}
+
+.hover-left .right {
+    width: var(--other-width);
+}
+
+.hover-right .left {
+    width: var(--other-width);
+}
+
+.hover-right .right {
+    width: var(--hover-width);
 }
